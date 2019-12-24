@@ -1,0 +1,30 @@
+server:
+  port: 8001
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml  #mybatis所在路径
+  type-aliases-package: com.example.demo.springcloud.entities #entity别名类
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml #mapper映射文件
+
+spring:
+   application:
+    name: microservicecloud-dept
+   datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/cloudDB01?useSSL=false
+    username: ENC(NH3dgqyfQo2/c8s0zy5JVOMzAbvBCe+W)
+    password: ENC(NEWsP96aE0Ms1lBIYGvG0w==)
+    validationQuery: select 1 from dual
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+    type: com.zaxxer.hikari.HikariDataSource
+
+#//加密所需的salt(盐)
+jasypt:
+  encryptor:
+    password: EbfYkitulv73I2p0mXI50JMXoaxZTKJ7
+
