@@ -9,4 +9,4 @@ password 进行加密操作的密钥
 
 algorithm 使用的加密算法
 
-![密码加密.png]
+* [密码加密.png](密码加密.png)
